@@ -33,3 +33,8 @@ Edit `main.c` to your liking using the available functions. All functions return
 - `get_os_clean()` — Shorter OS name (e.g. `Windows 11`)
 - `get_shell()` — Current shell (e.g. `PowerShell`)
 - `get_terminal()` — Current terminal (e.g. `Windows Terminal`)
+
+## Contributing
+You're free to do anything with it!
+
+The use gen AI is fine but it is discouraged to depend on it 100%. Reading and understanding what the AI generated before submitting goes a long way <3
