@@ -1,7 +1,9 @@
 # WinFetch
 A lightweight neofetch-style system info tool for Windows, written in C.
 An easy and familiar project for first-year CS students to tinker with and make their first open-source contributions using C!
+
 ![](image.png)
+
 ## Requirements
 - GCC 
 - make
@@ -32,3 +34,8 @@ Edit `main.c` to your liking using the available functions. All functions return
 - `get_os_clean()` — Shorter OS name (e.g. `Windows 11`)
 - `get_shell()` — Current shell (e.g. `PowerShell`)
 - `get_terminal()` — Current terminal (e.g. `Windows Terminal`)
+- `get_resolution_primary()` — Primary display resolution (e.g. `2560x1600`)
+- `get_refresh_rate()` — Display refresh rate (e.g. `60`)
+- `get_ram_total()` — Total RAM (e.g. `16.00 GiB`)
+- `get_ram_used()` — Used RAM (e.g. `8.23 GiB`)
+- `get_ram_available()` — Available RAM (e.g. `7.77 GiB`)

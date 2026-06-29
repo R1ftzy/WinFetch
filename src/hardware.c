@@ -74,3 +74,27 @@ char* get_cpu(){
 
   return cpu;
 }
+
+char* get_terminal_size(){
+  int width = GetSystemMetrics(SM_CXSCREEN);
+  int height = GetSystemMetrics(SM_CYSCREEN);
+  static char tr[16];
+  snprintf(tr, sizeof(tr), "%dx%d", width, height);
+  return tr;
+}
+char* get_resolution_primary(){
+  DEVMODE dm;
+  dm.dmSize = sizeof(dm);
+  static char res[16];  
+  EnumDisplaySettings(NULL, ENUM_CURRENT_SETTINGS, &dm);
+    snprintf(res, sizeof(res), "%lux%lu", dm.dmPelsWidth, dm.dmPelsHeight);
+  return res;
+}
+char* get_refresh_rate(){
+  DEVMODE dm;
+  dm.dmSize = sizeof(dm);
+  static char rr[4];  
+  EnumDisplaySettings(NULL, ENUM_CURRENT_SETTINGS, &dm);
+    snprintf(rr, sizeof(rr), "%lu", dm.dmDisplayFrequency);
+  return rr;
+}
