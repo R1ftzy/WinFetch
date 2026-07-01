@@ -23,18 +23,18 @@
 int main(){
   SetConsoleOutputCP(CP_UTF8);
   printf("╔═══════════╤═══%s@%s═══════════════╗\n", get_user(), get_hostname());
-  printf("  Model     │ %s       \n", get_device());
+  printf("  Model     │ %s\n", get_device());
   printf("╠═══════════╪═══════════════════════════════════════╣\n");
-  printf("  OS        │ %s                            \n", get_os_clean());
-  printf("  Shell     │ %s                            \n", get_shell());
-  printf("  Terminal  │ %s                                 \n", get_terminal());
+  printf("  OS        │ %s\n", get_os_clean());
+  printf("  Shell     │ %s\n", get_shell());
+  printf("  Terminal  │ %s\n", get_terminal());
   printf("╠═══════════╪═══════════════════════════════════════╣\n");
-  printf("  CPU       │ %s (%s)    \n", get_cpu(), get_logical_cores());
-  printf("  Arch      │ %s                                 \n", get_architecture());
-  printf("  Display   │ %s@%shz                         \n", get_resolution_primary(), get_refresh_rate());
-  printf("  Memory    │ %s/%s (free)              \n", get_ram_available(), get_ram_total());
+  printf("  CPU       │ %s (%s)\n", get_cpu(), get_logical_cores());
+  printf("  Arch      │ %s\n", get_architecture());
+  printf("  Display   │ %s@%shz\n", get_resolution_primary(), get_refresh_rate());
+  printf("  Memory    │ %s/%s (free)\n", get_ram_available(), get_ram_total());
   printf("╠═══════════╪═══════════════════════════════════════╣\n");
-  printf("  Battery   │ %s (%s) @ %s              \n", get_battery_percentage(), get_battery_status(), get_battery_rate());
+  printf("  Battery   │ %s (%s) @ %s\n", get_battery_percentage(), get_battery_status(), get_battery_rate());
   printf("╚═══════════╧═══════════════════════════════════════╝\n");
 
 }
