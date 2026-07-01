@@ -42,7 +42,7 @@ Edit `main.c` to your liking using the available functions. All functions return
 - `get_ram_available()` — Available RAM (e.g. `7.77 GiB`)
 - `get_battery_percentage()` — Current charge (e.g. `51%`)
 - `get_battery_status()` — Charging or discharging (e.g. `Discharging`)
-- `get_battery_rate()` — Current rate (e.g. `12.5W` or `+18.0W`)
+- `get_battery_rate()` — Current rate (e.g. `10.5W`)
 - `get_battery_life()` — Time remaining on battery (e.g. `2Hr 30min`, `N/A` when charging)
 - `get_battery_max_capacity()` — Max battery capacity (e.g. `90.12Wh`)
 

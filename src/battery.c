@@ -36,13 +36,9 @@ char* get_battery_life(){
 char* get_battery_rate(){
   SYSTEM_BATTERY_STATE s;
   CallNtPowerInformation(SystemBatteryState, NULL, 0, &s, sizeof(s));
-  static char ch[8];
-  float rate = (float)s.Rate / 1000;
-  if (rate < 0)
-    snprintf(ch, sizeof(ch), "%.1fW", -rate);
-  else
-    snprintf(ch, sizeof(ch), "+%.1fW", rate);
-  return ch;
+  static char rate[8];
+  snprintf(rate, sizeof(rate), "%.1fW", ((float)-s.Rate)/1000);
+  return rate;
 }
 
 // char* get_battery_health(){
