@@ -45,7 +45,8 @@ Edit `main.c` to your liking using the available functions. All functions return
 - `get_battery_rate()` — Current rate (e.g. `10.5W`)
 - `get_battery_life()` — Time remaining on battery (e.g. `2Hr 30min`, `N/A` when charging)
 - `get_battery_max_capacity()` — Max battery capacity (e.g. `90.12Wh`)
-
+- `get_gpu()` — Full GPU name (e.g. `NVIDIA GeForce RTX 4060 Laptop GPU`)
+- `get_vram()` — Total VRAM (e.g. `8.00 GiB`)
 
 ## Contributing
 You're free to do anything with it!
