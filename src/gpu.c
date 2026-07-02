@@ -2,7 +2,7 @@
 #include <windows.h>
 #define BtoGiB (1024*1024*1024)
 
-char* gpuName() {
+char* get_gpu() {
     HKEY hKey;
     LPCSTR gpuPath = "SYSTEM\\CurrentControlSet\\Control\\Class\\{4d36e968-e325-11ce-bfc1-08002be10318}\\0000";
     static char gpuName[256];
@@ -18,21 +18,24 @@ char* gpuName() {
         RegCloseKey(hKey);
         return gpuName;
     }
+    else return "";
 }
 
 
-float vramSpecs(){
+char* get_vram(){
     HKEY hKey;
     LPCSTR gpuPath = "SYSTEM\\CurrentControlSet\\Control\\Class\\{4d36e968-e325-11ce-bfc1-08002be10318}\\0000";
     unsigned long long vramBytes = 0;
     DWORD vramSize = sizeof(vramBytes);
-
+    static char vram[16];
     if (RegOpenKeyExA(HKEY_LOCAL_MACHINE, gpuPath, 0, KEY_READ, &hKey) == ERROR_SUCCESS) {
         if (RegQueryValueExA(hKey, "HardwareInformation.qwMemorySize", NULL, NULL, (LPBYTE)&vramBytes, &vramSize) != ERROR_SUCCESS) {
             printf("Error finding VRAM. Check ./src/gpu.c");
         }
         RegCloseKey(hKey);
-        return ((float)vramBytes / BtoGiB);
+        snprintf(vram, sizeof(vram), "%.2f GiB", (float)vramBytes / BtoGiB);
+        return vram;
     }
+    else return "";
 }
 

@@ -1,4 +1,5 @@
-battery*
 display*
 bin
+.vscode
 *.exe
+grafitti*
