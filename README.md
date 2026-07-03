@@ -1,7 +1,8 @@
 # WinFetchPlus
 A lightweight neofetch-style system info tool for Windows, written in C.
 
-Still simple but more advanced than WinFetch
+Still simple but more advanced than WinFetch.
+
 ![](image.png)
 
 ## Requirements
