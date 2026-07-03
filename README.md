@@ -1,8 +1,7 @@
-# WinFetch
+# WinFetchPlus
 A lightweight neofetch-style system info tool for Windows, written in C.
 
-An easy and familiar project for first-year CS students to tinker with and make their first open-source contributions using C!
-
+Still simple but more advanced than WinFetch
 ![](image.png)
 
 ## Requirements
@@ -17,12 +16,16 @@ Feel free to try out [dev_setup](https://github.com/TaH00R/dev_setup) for a one-
 ```
 make
 ```
-- This will use the config in `main.c`
+- This will use the config in ~~`main.c`~~ `config.c`
 - Your exe will be in the `/bin` folder to use
-
+- Add bin path to your environment variables to use from anywhere
+- Run using optional logo arguement
+```
+winfetch [logo_name]
+```
 ## Customization
-Edit `main.c` to your liking using the available functions. All functions return a string, so they work directly inside `printf`.
-
+Edit `config.c` to your liking using the available functions. All functions return a string, so they work directly inside `snprintf`.
+For logos, you can use the few given in `/logos` or add new one new ascii art!
 ### Available functions
 - `get_user()` — Your username (e.g. `r1ftzy`)
 - `get_hostname()` — Your system name (e.g. `LAPTOP-XXXXXXX`)
